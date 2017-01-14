@@ -118,8 +118,8 @@
 
         var i=<?php echo $i; ?>;
         var len=i-1;
-        var lat[]=<?php echo json_encode($lat); ?>;
-        var lon[]=<?php echo json_encode($lon); ?>;
+        var lat=<?php echo json_encode($lat); ?>;
+        var lon=<?php echo json_encode($lon); ?>;
         alert(lat[0]);
         alert(typeof(lat[0]));
         while(i<=len)
