@@ -121,7 +121,7 @@
         while(i<=len)
           {
             waypts.push({ 
-              location:new google.maps.LatLng(lat[i], lon[i]), 
+              location:new google.maps.LatLng(Number(lat[i]),Number(lon[i]), 
               stopover: true});
             i=i+1;
           } 
