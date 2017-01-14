@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT sender,  value, lat ,lon FROM zxdot";
+$sql = "SELECT sender,  value, lat ,lon FROM kochiat";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
