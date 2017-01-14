@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
 
             $lat=$row["lat"];
             $i=$i+1;
-            echo "'$lat',";
+            echo "$lat";
     }
 } else {
     echo "0 results";
