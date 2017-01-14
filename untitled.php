@@ -71,7 +71,7 @@
 
     if ($result->num_rows > 0) {
         // output data of each row
-      $i=1;
+      $i=0;
         while($row = $result->fetch_assoc())
         {
            // echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
@@ -118,6 +118,7 @@
         var lat[]=<?php echo json_encode($lat); ?>;
         var lon[]=<?php echo json_encode($lon); ?>;
         alert(lat[0]);
+        alert(typeof(lat[0]));
         while(i<=len)
           {
             waypts.push({ 
