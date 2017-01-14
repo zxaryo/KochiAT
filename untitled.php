@@ -113,10 +113,10 @@
         var waypts = [];
         var checkboxArray = document.getElementById('waypoints');
 
-        var i='<?php echo $i; ?>';
+        var i=<?php echo $i; ?>;
         var len=i;
-        var lat='<?php echo json_encode($lat); ?>';
-        var lon='<?php echo json_encode($lon); ?>';
+        var lat=<?php echo json_encode($lat); ?>;
+        var lon=<?php echo json_encode($lon); ?>;
         while(i<=len)
           {
             waypts.push({ 
