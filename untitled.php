@@ -69,9 +69,10 @@
     $lat = array("10.044331");
     $lon = array("76.324484");
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0)
+     {
         // output data of each row
-      $i=0;
+       $i=0;
         while($row = $result->fetch_assoc())
         {
            // echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
@@ -79,9 +80,11 @@
             $lon[$i]=(float)$row["lon"];
             $i=$i+1;
         }
-    } else {
-        echo "0 results";
-    }
+     }
+     else 
+     {
+        echo "<script>alert('0 results')</script>";
+     }
     $conn->close();
 
     ?>
@@ -122,7 +125,7 @@
         while(i<=len)
           {
             waypts.push({ 
-              location:new google.maps.LatLng(lat[i],lon[i], 
+              location:new google.maps.LatLng(Number(lat[i]),Number(lon[i]), 
               stopover: true});
             i=i+1;
           } 

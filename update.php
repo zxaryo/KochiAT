@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "UPDATE kochiAT SET value=".$_GET['value']." WHERE sender=' ".$_GET['sender']." ' ";
+$sql = "UPDATE kochiat SET value=".$_GET['value']." WHERE sender=' ".$_GET['sender']." ' ";
 
 //echo $sql;
 
