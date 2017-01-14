@@ -11,8 +11,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+$valu = $_GET['value'];
+$sende = $_GET['sender'];
 
-$sql = "UPDATE kochiat SET value=". $_GET['value'] ." WHERE sender= ' " .$_GET['sender']. " ' ";
+$sql = "UPDATE kochiat SET value=$valu WHERE sender= '$sende' ";
 
 //echo $sql;
 echo "<script>alert($sql)</script>";
