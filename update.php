@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 $sql = "UPDATE kochiat SET value=".$_GET['value']." WHERE sender=' ".$_GET['sender']." ' ";
 
 //echo $sql;
-
+echo "<scipt>alert($sql)</script>";
 if (mysqli_query($conn,$sql) === TRUE) {
     echo "Record updated successfully";
 } else {
