@@ -117,14 +117,18 @@
         var len=i;
         var lat[]=<?php echo json_encode($lat); ?>;
         var lon[]=<?php echo json_encode($lon); ?>;
-        while(i<=len)
+        
+        /*while(i<=len)
           {
             waypts.push({ 
               location:new google.maps.LatLng(lat[i], lon[i]), 
               stopover: true});
             i=i+1;
-          }
-
+          } 
+*/
+              waypts.push({ 
+              location:new google.maps.LatLng(10.047414,76.320009), 
+              stopover: true});
 
         directionsService.route({
           origin: '10.046831, 76.328074',
