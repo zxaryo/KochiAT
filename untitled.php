@@ -71,13 +71,21 @@
         die("Connection failed: " . $conn->connect_error);
     } 
 
-    $sql = "SELECT sender, timesamp, value FROM zxdot ORDER BY timesamp DESC";
+    $sql = "SELECT sender,  value, lat ,lon FROM kochiat";
     $result = $conn->query($sql);
+
+    $lat = array("10.044331");
+    $lon = array("76.324484");
 
     if ($result->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo  $row["timesamp"]. "| " .$row["sender"].  " : " . $row["value"]. "<br>";
+      $i=1;
+        while($row = $result->fetch_assoc())
+        {
+            echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
+            $lat[$i]=$row["lat"];
+            $lon[$i]=$row["lon"];
+            $i=$i+1;
         }
     } else {
         echo "0 results";
@@ -103,12 +111,16 @@
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var waypts = [];
         var checkboxArray = document.getElementById('waypoints');
-          waypts.push({ 
-              location:new google.maps.LatLng(10.044331, 76.324484), 
+
+        $len=$i;
+        $i=0;
+        while($i<=$len)
+          {
+            waypts.push({ 
+              location:new google.maps.LatLng($lat[$i], $lon[$i]), 
               stopover: true});
-          waypts.push({ 
-              location:new google.maps.LatLng(10.043155, 76.327342), 
-              stopover: true});
+            $i=$i+1;
+          }
 
 
         directionsService.route({
