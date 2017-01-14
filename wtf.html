@@ -50,41 +50,7 @@
     </style>
   </head>
   <body>
-      <?php
-
-      $servername = "localhost";
-          $username = "kochiat";
-          $password = "jStfpV8AsKJr5mw3";
-          $dbname = "kochiat";
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-
-    $sql = "SELECT sender,  value, lat ,lon FROM kochiat";
-    $result = $conn->query($sql);
-
-    $lat = array("10.044331");
-    $lon = array("76.324484");
-
-    if ($result->num_rows > 0) {
-        // output data of each row
-      $i=0;
-        while($row = $result->fetch_assoc())
-        {
-           // echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
-            $lat[$i]=(float)$row["lat"];
-            $lon[$i]=(float)$row["lon"];
-            $i=$i+1;
-        }
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
-
-    ?>
+   
     <div id="map"></div>
     <div id="right-panel">
     <div>
@@ -113,20 +79,11 @@
         var waypts = [];
        
 
-        var i=<?php echo $i; ?>;
-        var len=i-1;
-        var lat[]=<?php echo json_encode($lat); ?>;
-        var lon[]=<?php echo json_encode($lon); ?>;
-        alert(lat[0]);
-        alert(typeof(lat[0]));
-        while(i<=len)
-          {
+      
             waypts.push({ 
-              location:new google.maps.LatLng(lat[i],lon[i], 
+              location:new google.maps.LatLng(10.046230, 76.340186), 
               stopover: true});
-            i=i+1;
-          } 
-
+        
         directionsService.route({
           origin: '10.046831, 76.328074',
           destination: '10.046831, 76.328074',
