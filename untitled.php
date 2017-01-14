@@ -115,9 +115,9 @@
         var waypts = [];
         var checkboxArray = document.getElementById('waypoints');
 
-        $len=$i;
-        $i=0;
-        while($i<=$len)
+        var i='<php echo $i; ?>';
+        var len=i;
+        while(i<=len)
           {
             waypts.push({ 
               location:new google.maps.LatLng($lat[$i], $lon[$i]), 

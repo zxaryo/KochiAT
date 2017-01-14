@@ -21,11 +21,11 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . ", " . $row["lon"] . "<br>";
 
-            $lat[$i]=.$row["lat"].;
+          /*  $lat[$i]=.$row["lat"].;
             $lon[$i]=.$row["lon"].;
             $i=$i+1;
             echo $lat[$i];
-            echo $lon[$i];
+            echo $lon[$i]; */
     }
 } else {
     echo "0 results";
