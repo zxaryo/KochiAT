@@ -117,7 +117,7 @@
         var len=i-1;
         var lat[]=<?php echo json_encode($lat); ?>;
         var lon[]=<?php echo json_encode($lon); ?>;
-        
+        alert(lat[0]);
         while(i<=len)
           {
             waypts.push({ 
