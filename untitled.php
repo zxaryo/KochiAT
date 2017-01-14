@@ -60,8 +60,8 @@
     <?php
 
       $servername = "localhost";
-      $username = "adminvj197IY";
-      $password = "unZ7s7rQx4YqL";
+       $username = "kochiat";
+      $password = "jStfpV8AsKJr5mw3";
       $dbname = "kochiat";
 
       // Create connection
