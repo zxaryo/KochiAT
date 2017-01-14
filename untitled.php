@@ -122,10 +122,17 @@
         var lon=<?php echo json_encode($lon); ?>;
         alert(lat[0]);
         alert(typeof(lat[0]));
+        for(var j=0;j<len;j++)
+        {
+          lat[j]=Number(lat[j]);
+          lon[j]=Number(lon[j]);
+        }
+
+
         while(i<=len)
           {
             waypts.push({ 
-              location:new google.maps.LatLng(Number(lat[i]),Number(lon[i]), 
+              location:new google.maps.LatLng(lat[i],lon[i]), 
               stopover: true});
             i=i+1;
           } 
