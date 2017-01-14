@@ -12,10 +12,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "UPDATE kochiat SET value=".$_GET['value']." WHERE sender= ' ".$_GET['sender']." '' ";
+$sql = "UPDATE kochiat SET value=". $_GET['value'] ." WHERE sender= ' " .$_GET['sender']. " '' ";
 
 //echo $sql;
-echo "<scipt>alert($sql)</script>";
+echo "<script>alert($sql)</script>";
 if (mysqli_query($conn,$sql) === TRUE) {
     echo "Record updated successfully";
 } else {
