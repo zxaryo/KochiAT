@@ -120,8 +120,8 @@
         var len=i-1;
         var lat=<?php echo json_encode($lat); ?>;
         var lon=<?php echo json_encode($lon); ?>;
-        alert(lat[0]);
-        alert(typeof(lat[0]));
+       // alert(lat[0]);
+        // alert(typeof(lat[0]));
         for(var j=0;j<len;j++)
         {
           lat[j]=Number(lat[j]);

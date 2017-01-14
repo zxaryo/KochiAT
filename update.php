@@ -6,7 +6,7 @@
       $dbname = "kochiat";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -16,7 +16,7 @@ $sql = "UPDATE kochiat SET value=".$_GET['value']." WHERE sender=' ".$_GET['send
 
 //echo $sql;
 
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($conn,$sql) === TRUE) {
     echo "Record updated successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
