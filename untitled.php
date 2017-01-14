@@ -78,6 +78,8 @@
             $lat[$i]=$row["lat"];
             $lon[$i]=$row["lon"];
             $i=$i+1;
+            echo lat[$i];
+            echo lon[$i];
         }
     } else {
         echo "0 results";
