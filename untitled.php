@@ -50,15 +50,7 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
-    <div id="right-panel">
-    <div>
-    <b>Start:</b>
-
-    <div id="directions-panel"></div>
-    </div>
-    <br>
-    <?php
+      <?php
 
       $servername = "localhost";
           $username = "kochiat";
@@ -82,7 +74,7 @@
       $i=1;
         while($row = $result->fetch_assoc())
         {
-            echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
+           // echo  $row["sender"].  " : " . $row["value"]. " " .$row["lat"] . " " . $row["lon"] . "<br>";
             $lat[$i]=$row["lat"];
             $lon[$i]=$row["lon"];
             $i=$i+1;
@@ -93,6 +85,15 @@
     $conn->close();
 
     ?>
+    <div id="map"></div>
+    <div id="right-panel">
+    <div>
+    <b>Start:</b>
+
+    <div id="directions-panel"></div>
+    </div>
+    <br>
+
     <script>
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
