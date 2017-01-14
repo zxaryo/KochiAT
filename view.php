@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "u595707791_zxdot";
-$password = "u595707791_zxdot";
-$dbname = "u595707791_zxdot";
+$username = "adminvj197IY";
+$password = "unZ7s7rQx4YqL";
+$dbname = "kochiat";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
