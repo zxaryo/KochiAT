@@ -127,7 +127,7 @@
           lat[j]=Number(lat[j]);
           lon[j]=Number(lon[j]);
         }
-
+        i=0;
 
         while(i<=len)
           {
